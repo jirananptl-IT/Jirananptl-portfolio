@@ -3,107 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Jiranan Portfolio</title>
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
     }
+
     header {
-      background: #1e3a5f;
-      color: white;
-      padding: 20px;
       text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #e0f2fe, #f8fafc);
     }
+
+    header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    header h1 { font-size: 32px; }
+
+    header p { color: #475569; }
+
     nav {
-      background: #16324f;
-      padding: 10px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #1e293b;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
+
     section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
+
     h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-    .project {
       margin-bottom: 20px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 10px;
     }
+
+    ul li { margin-bottom: 8px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      margin-top: 20px;
-      background: #1e3a5f;
-      color: white;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Jiranan IT</h1>
-  <p>IT Specialist | Server | Network | HOSxP</p>
+  <img src="profile.jpg" alt="profile">
+  <h1>จิรนันท์ โพธิเล</h1>
+  <p>นักวิชาการคอมพิวเตอร์</p>
+  <p>📞 083-8639296 | 📧 jp.japeck@gmail.com</p>
+  <p>📍 925/6 ม.3 ถ.เจนจบทิศ ต.ในเมือง อ.บ้านไผ่ จ.ขอนแก่น 40110</p>
 </header>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <a href="#about">เกี่ยวกับฉัน</a>
+  <a href="#experience">ประสบการณ์</a>
+  <a href="#skills">ทักษะ</a>
+  <a href="#education">การศึกษา</a>
+  <a href="#cert">ประกาศนียบัตร</a>
 </nav>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p>ผู้ดูแลระบบ IT โรงพยาบาล มีประสบการณ์ด้าน Server, Network, และระบบ HOSxP พร้อมพัฒนาระบบให้มีความปลอดภัยและมีประสิทธิภาพ</p>
+  <h2>เกี่ยวกับฉัน</h2>
+  <p>เจ้าหน้าที่ไอทีที่มีความสามารถด้านการเขียน SQL การจัดทำรายงานข้อมูล และการดูแลระบบสารสนเทศของหน่วยงาน มีประสบการณ์ด้านงานเอกสารราชการและงานจัดซื้อจัดจ้าง พร้อมทักษะการประสานงานและสนับสนุนงานไอทีให้ดำเนินได้อย่างมีประสิทธิภาพ</p>
+</section>
+
+<section id="experience">
+  <h2>ประสบการณ์การทำงาน</h2>
+  <div class="card">
+    <h3>2567 - ปัจจุบัน | โรงพยาบาลพล</h3>
+    <p>นักวิชาการคอมพิวเตอร์</p>
+    <ul>
+      <li>เขียน SQL จัดทำรายงานตามตัวชี้วัด</li>
+      <li>จัดทำโครงการจัดซื้อจัดจ้าง และงานธุรการ</li>
+      <li>ดูแลระบบ MOPH เช่น Moph refer, หมอพร้อม, Backoffice</li>
+      <li>IT Support และประสานงานระบบ</li>
+    </ul>
+  </div>
 </section>
 
 <section id="skills">
-  <h2>Skills</h2>
+  <h2>ทักษะ</h2>
   <ul>
-    <li>Server Management (Proxmox, Linux)</li>
-    <li>Database (MySQL)</li>
-    <li>Network & Security</li>
-    <li>Web Development (HTML, CSS, React)</li>
+    <li>SQL (ดึงข้อมูล วิเคราะห์ และสร้างรายงาน)</li>
+    <li>HOSxP XE4, GTW Backoffice</li>
+    <li>PHP Programming</li>
+    <li>AI Tools สำหรับงาน IT</li>
+    <li>Cybersecurity เบื้องต้น</li>
+    <li>Network เบื้องต้น</li>
   </ul>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Hospital Server Upgrade</h3>
-    <p>ปรับปรุงระบบ Server รองรับ HIS และเพิ่มความเสถียรของระบบ</p>
+<section id="education">
+  <h2>ประวัติการศึกษา</h2>
+  <div class="card">
+    <p>มหาวิทยาลัยมหาสารคาม (2563 - 2567)</p>
+    <p>ปริญญาตรี วิทยาศาสตร์บัณฑิต สาขาเทคโนโลยีสารสนเทศ</p>
+    <p>มัธยมศึกษาตอนปลาย สาย จีน - อังกฤษ</p>
   </div>
-
-  <div class="project">
-    <h3>Cyber Security Implementation</h3>
-    <p>วางระบบความปลอดภัย เช่น Firewall และ PDPA compliance</p>
-  </div>
-
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
+<section id="cert">
+  <h2>ประกาศนียบัตร</h2>
+  <ul>
+    <li>PDPA สำหรับภาครัฐ</li>
+    <li>ผู้ควบคุมและประมวลผลข้อมูลส่วนบุคคล</li>
+    <li>Cybersecurity เบื้องต้น</li>
+  </ul>
 </section>
 
 <footer>
-  <p>© 2026 Jiranan IT</p>
+  <p>© 2026 Jiranan Portfolio</p>
 </footer>
 
 </body>
