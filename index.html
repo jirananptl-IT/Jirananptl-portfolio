@@ -1,182 +1,189 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jiranan Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiranan Portfolio</title>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #e0f2fe, #f8fafc);
-    }
-
-    header img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: contain;
-      background: #fff;
-      padding: 6px;
-      border: 3px solid #38bdf8;
-      margin-bottom: 15px;
-    }
-
-    header h1 { font-size: 32px; }
-    header p { color: #475569; }
-
-    /* NAVBAR */
-    .navbar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 15px;
-      background: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .navbar a {
-      padding: 8px 16px;
-      border: 1px solid #cbd5f5;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #1e293b;
-      font-size: 14px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      background: #f8fafc;
-    }
-
-    .navbar a:hover {
-      background: #38bdf8;
-      color: white;
-      border-color: #38bdf8;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(56,189,248,0.3);
-    }
-
-    .navbar a.active {
-      background: #38bdf8;
-      color: white;
-      border-color: #38bdf8;
-      box-shadow: 0 4px 10px rgba(56,189,248,0.3);
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      scroll-margin-top: 100px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      border-left: 5px solid #38bdf8;
-      padding-left: 10px;
-    }
-
-    ul li { margin-bottom: 8px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #f1f5f9;
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* 📱 Mobile */
-    @media (max-width: 768px) {
-      header {
-        padding: 40px 15px;
-      }
-
-      header h1 {
-        font-size: 24px;
-      }
-
-      header p {
-        font-size: 14px;
-      }
-
-      section {
-        margin: 20px 10px;
-        padding: 20px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      header img {
-        width: 120px;
-        height: 120px;
-      }
-      .cert-gallery {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
+body {
+  font-family:'Segoe UI', sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
 }
 
-.cert-gallery img {
-  width: 100%;
-  height: 172px;
-  object-fit: contain; /* รองรับแนวตั้ง-แนวนอน */
-  background: #f8fafc;
-  border-radius: 10px;
-  padding: 8px;
-  border: 1px solid #e2e8f0;
-  cursor: pointer;
-  transition: 0.3s;
+/* HEADER */
+header {
+  text-align:center;
+  padding:60px 20px;
+  background:linear-gradient(135deg,#e0f2fe,#f8fafc);
 }
 
-.cert-gallery img:hover {
-  transform: scale(1.05);
+header img {
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:contain;
+  background:#fff;
+  padding:6px;
+  border:3px solid #38bdf8;
 }
-    }
-  </style>
+
+header h1 { font-size:32px; }
+header p { color:#475569; }
+
+/* NAV */
+.navbar {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  padding:15px;
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar a {
+  padding:8px 16px;
+  border-radius:999px;
+  border:1px solid #cbd5f5;
+  text-decoration:none;
+  color:#1e293b;
+  transition:.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background:#38bdf8;
+  color:#fff;
+}
+
+/* SECTION */
+section {
+  max-width:1000px;
+  margin:40px auto;
+  padding:30px;
+  background:#fff;
+  border-radius:16px;
+  scroll-margin-top:100px;
+}
+
+h2 {
+  border-left:5px solid #38bdf8;
+  padding-left:10px;
+  margin-bottom:20px;
+}
+
+.card {
+  background:#f1f5f9;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* ===== SLIDER ===== */
+.cert-slider {
+  position:relative;
+  max-width:700px;
+  margin:30px auto;
+  overflow:hidden;
+  border-radius:16px;
+  background:#f8fafc;
+}
+
+.slider-track {
+  display:flex;
+  transition:transform 0.4s ease;
+}
+
+.slider-track img {
+  width:100%;
+  flex-shrink:0;
+  height:400px;
+  object-fit:contain;
+  background:#fff;
+  cursor:pointer;
+}
+
+/* ปุ่ม */
+.cert-slider button {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:white;
+  border:none;
+  font-size:22px;
+  padding:8px 12px;
+  border-radius:50%;
+  cursor:pointer;
+}
+.prev { left:10px; }
+.next { right:10px; }
+
+/* dots */
+.dots {
+  text-align:center;
+  padding:10px;
+}
+.dots span {
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin:5px;
+  background:#cbd5f5;
+  border-radius:50%;
+  cursor:pointer;
+}
+.dots .active {
+  background:#38bdf8;
+}
+
+/* modal */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:9999;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+}
+.modal img {
+  display:block;
+  margin:5% auto;
+  max-width:90%;
+  max-height:80%;
+}
+.close {
+  position:absolute;
+  top:20px;
+  right:40px;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  header img { width:120px; height:120px; }
+  section { margin:20px 10px; }
+  .slider-track img { height:250px; }
+}
+
+html { scroll-behavior:smooth; }
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="profile.jpg" alt="profile">
+  <img src="profile.jpg">
   <h1>นางสาวจิรนันท์ โพธิเล</h1>
   <p>นักวิชาการคอมพิวเตอร์ | IT & Data (SQL) | Hospital Information Systems</p>
   <p>📞 083-8639296 | 📧 jp.japeck@gmail.com</p>
-  <p>📍 925/6 ม.3 ถ.เจนจบทิศ ต.ในเมือง อ.บ้านไผ่ จ.ขอนแก่น 40110</p>
 </header>
 
 <nav class="navbar">
@@ -188,8 +195,8 @@
 </nav>
 
 <section id="about">
-  <h2>เกี่ยวกับฉัน</h2>
-  <p>นักวิชาการคอมพิวเตอร์ที่มีประสบการณ์ด้านการจัดการข้อมูลและระบบสารสนเทศของหน่วยงาน สามารถเขียน SQL เพื่อวิเคราะห์และจัดทำรายงานตามตัวชี้วัด พร้อมดูแลระบบงานด้านสาธารณสุข มีความเข้าใจในงานราชการและกระบวนการจัดซื้อจัดจ้าง รวมถึงมีทักษะในการประสานงานและสนับสนุนงานไอทีให้ดำเนินได้อย่างมีประสิทธิภาพ</p>
+<h2>เกี่ยวกับฉัน</h2>
+<p>นักวิชาการคอมพิวเตอร์ที่มีประสบการณ์ด้านการจัดการข้อมูลและระบบสารสนเทศของหน่วยงาน สามารถเขียน SQL เพื่อวิเคราะห์และจัดทำรายงานตามตัวชี้วัด พร้อมดูแลระบบงานด้านสาธารณสุข มีความเข้าใจในงานราชการและกระบวนการจัดซื้อจัดจ้าง รวมถึงมีทักษะในการประสานงานและสนับสนุนงานไอทีให้ดำเนินได้อย่างมีประสิทธิภาพ</p>
 </section>
 
 <section id="experience">
@@ -239,99 +246,143 @@
     <li>Digital Literacy</li>
     <li>Project Management</li>
     <li>The 4 Types Of Analytics</li>
-    <div class="cert-gallery">
-  <img src="1.PDPA.jpg" alt="certificate">
-  <img src="2.Moph.jpg" alt="certificate">
-  <img src="3.Cyber.jpg" alt="certificate">
-  <img src="4.diskill.jpg" alt="certificate">
-  <img src="5.GanAI.jpg" alt="certificate">
-  <img src="6.literacy.jpg" alt="certificate">
-  <img src="7.Project.jpg" alt="certificate">
-  <img src="8.The4.jpg" alt="certificate">
-</div>
   </ul>
+
+<!-- SLIDER -->
+<div class="cert-slider">
+  <div class="slider-track">
+    <img src="1.PDPA.jpg">
+    <img src="2.Moph.jpg">
+    <img src="3.Cyber.jpg">
+    <img src="4.diskill.jpg">
+    <img src="5.GanAI.jpg">
+    <img src="6.literacy.jpg">
+    <img src="7.Project.jpg">
+    <img src="8.The4.jpg">
+  </div>
+
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <div class="dots"></div>
+</div>
+
 </section>
 
-<footer>
-  <p>© 2026 Jiranan Portfolio</p>
+<footer style="text-align:center;padding:20px;">
+© 2026 Jiranan Portfolio
 </footer>
 
-<script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
-    const sectionHeight = section.offsetHeight;
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  // 🔥 fix section สุดท้าย
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    current = sections[sections.length - 1].id;
-  }
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-<div id="imgModal" class="modal">
+<!-- MODAL -->
+<div class="modal" id="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
+  <img id="modalImg">
 </div>
 
-<style>
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 50px;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80%;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-</style>
-
 <script>
-const modal = document.getElementById("imgModal");
-const modalImg = document.getElementById("modalImg");
+// active menu
+const sections = document.querySelectorAll("section");
+const links = document.querySelectorAll(".navbar a");
 
-document.querySelectorAll(".cert-gallery img").forEach(img => {
-  img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
+window.addEventListener("scroll",()=>{
+  let current="";
+  sections.forEach(sec=>{
+    if(scrollY>=sec.offsetTop-150){
+      current=sec.id;
+    }
+  });
+
+  if((window.innerHeight+scrollY)>=document.body.offsetHeight){
+    current=sections[sections.length-1].id;
   }
+
+  links.forEach(a=>{
+    a.classList.remove("active");
+    if(a.getAttribute("href")==="#"+current){
+      a.classList.add("active");
+    }
+  });
 });
 
-document.querySelector(".close").onclick = function() {
-  modal.style.display = "none";
+// slider
+const track = document.querySelector(".slider-track");
+const slides = document.querySelectorAll(".slider-track img");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+const dotsContainer = document.querySelector(".dots");
+
+let index = 0;
+let interval;
+
+// dots
+slides.forEach((_, i)=>{
+  const dot = document.createElement("span");
+  dot.onclick=()=>{ index=i; update(); };
+  dotsContainer.appendChild(dot);
+});
+
+function update(){
+  track.style.transform=`translateX(-${index*100}%)`;
+  document.querySelectorAll(".dots span").forEach((d,i)=>{
+    d.classList.toggle("active", i===index);
+  });
+}
+
+nextBtn.onclick=()=>{
+  index=(index+1)%slides.length;
+  update();
 };
+
+prevBtn.onclick=()=>{
+  index=(index-1+slides.length)%slides.length;
+  update();
+};
+
+// auto slide
+function startAuto(){
+  interval=setInterval(()=>{
+    index=(index+1)%slides.length;
+    update();
+  },4000);
+}
+function stopAuto(){ clearInterval(interval); }
+
+startAuto();
+
+document.querySelector(".cert-slider").addEventListener("mouseenter",stopAuto);
+document.querySelector(".cert-slider").addEventListener("mouseleave",startAuto);
+
+// keyboard
+document.addEventListener("keydown",e=>{
+  if(e.key==="ArrowRight") nextBtn.click();
+  if(e.key==="ArrowLeft") prevBtn.click();
+});
+
+// swipe
+let startX=0;
+track.addEventListener("touchstart",e=>startX=e.touches[0].clientX);
+track.addEventListener("touchend",e=>{
+  let endX=e.changedTouches[0].clientX;
+  if(startX-endX>50) nextBtn.click();
+  if(endX-startX>50) prevBtn.click();
+});
+
+// modal
+const modal=document.getElementById("modal");
+const modalImg=document.getElementById("modalImg");
+
+slides.forEach(img=>{
+  img.onclick=()=>{
+    modal.style.display="block";
+    modalImg.src=img.src;
+  };
+});
+
+document.querySelector(".close").onclick=()=>modal.style.display="none";
+modal.onclick=()=>modal.style.display="none";
+
+update();
 </script>
+
 </body>
 </html>
