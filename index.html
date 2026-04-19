@@ -25,32 +25,55 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      object-fit: contain; /* แสดงภาพเต็ม ไม่ตัดหัว */
-      background: #fff; /* กันขอบโปร่ง */
-      padding: 6px; /* เว้นขอบเล็กน้อย */
+      object-fit: contain;
+      background: #fff;
+      padding: 6px;
       border: 3px solid #38bdf8;
       margin-bottom: 15px;
     }
 
     header h1 { font-size: 32px; }
-
     header p { color: #475569; }
 
-    nav {
+    /* NAVBAR */
+    .navbar {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      flex-wrap: wrap;
+      gap: 12px;
       padding: 15px;
       background: #ffffff;
       position: sticky;
       top: 0;
+      z-index: 1000;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
-    nav a {
-      color: #1e293b;
+    .navbar a {
+      padding: 8px 16px;
+      border: 1px solid #cbd5f5;
+      border-radius: 999px;
       text-decoration: none;
+      color: #1e293b;
+      font-size: 14px;
       font-weight: 500;
+      transition: all 0.3s ease;
+      background: #f8fafc;
+    }
+
+    .navbar a:hover {
+      background: #38bdf8;
+      color: white;
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(56,189,248,0.3);
+    }
+
+    .navbar a.active {
+      background: #38bdf8;
+      color: white;
+      border-color: #38bdf8;
+      box-shadow: 0 4px 10px rgba(56,189,248,0.3);
     }
 
     section {
@@ -60,6 +83,7 @@
       background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      scroll-margin-top: 100px;
     }
 
     h2 {
@@ -87,9 +111,12 @@
       padding: 20px;
       color: #64748b;
     }
-  
 
-    /* 📱 Mobile Responsive */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 📱 Mobile */
     @media (max-width: 768px) {
       header {
         padding: 40px 15px;
@@ -100,12 +127,6 @@
       }
 
       header p {
-        font-size: 14px;
-      }
-
-      nav {
-        flex-wrap: wrap;
-        gap: 10px;
         font-size: 14px;
       }
 
@@ -123,9 +144,9 @@
         height: 120px;
       }
     }
-
   </style>
 </head>
+
 <body>
 
 <header>
@@ -136,7 +157,7 @@
   <p>📍 925/6 ม.3 ถ.เจนจบทิศ ต.ในเมือง อ.บ้านไผ่ จ.ขอนแก่น 40110</p>
 </header>
 
-<nav>
+<nav class="navbar">
   <a href="#about">เกี่ยวกับฉัน</a>
   <a href="#experience">ประสบการณ์</a>
   <a href="#skills">ทักษะ</a>
@@ -196,6 +217,36 @@
 <footer>
   <p>© 2026 Jiranan Portfolio</p>
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  // 🔥 fix section สุดท้าย
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    current = sections[sections.length - 1].id;
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
